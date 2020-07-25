@@ -1,5 +1,6 @@
 class MonstersController < ApplicationController
   def index
-    @monsters = Monster.all
+    @q = Monster.ransack(params[:q])
+    @monsters = @q.result(distinct: true)
   end
 end

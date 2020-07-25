@@ -3,11 +3,11 @@
 <table>
   <tr>
     <th>名前</th>
-    <th>火</th>
-    <th>水</th>
-    <th>雷</th>
-    <th>氷</th>
-    <th>龍</th>
+    <th><%= sort_link(@q, :fire_effective, "火") %></th>
+    <th><%= sort_link(@q, :water_effective, "水") %></th>
+    <th><%= sort_link(@q, :thunder_effective, "雷") %></th>
+    <th><%= sort_link(@q, :ice_effective, "氷") %></th>
+    <th><%= sort_link(@q, :dragon_effective, "龍") %></th>
   </tr>
   <% @monsters.each do |monster| %>
     <tr>

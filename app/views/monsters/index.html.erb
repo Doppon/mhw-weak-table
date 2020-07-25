@@ -1,2 +1,22 @@
-<h1>Monsters#index</h1>
-<p>Find me in app/views/monsters/index.html.erb</p>
+<h1>モンスター弱点・早見表</h1>
+
+<table>
+  <tr>
+    <th>名前</th>
+    <th>火</th>
+    <th>水</th>
+    <th>雷</th>
+    <th>氷</th>
+    <th>龍</th>
+  </tr>
+  <% @monsters.each do |monster| %>
+    <tr>
+      <th><%= monster.name %></th>
+      <th><%= monster.fire_effective %></th>
+      <th><%= monster.water_effective %></th>
+      <th><%= monster.thunder_effective %></th>
+      <th><%= monster.ice_effective %></th>
+      <th><%= monster.dragon_effective %></th>
+    </tr>
+  <% end %>
+</table>
